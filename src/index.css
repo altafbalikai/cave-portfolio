@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* Custom Cave Fonts */
+@font-face {
+  font-family: "Greconian";
+  src: url("/fonts/Greconian.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rimba Andalas";
+  src: url("/fonts/Rimba_Andalas.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caprice";
+  src: url("/fonts/Caprice.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quillstone";
+  src: url("/fonts/Quillstone.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* Cave color palette */
+    --background: 20 15% 6%;
+    --foreground: 35 25% 85%;
+
+    --card: 20 12% 10%;
+    --card-foreground: 35 25% 85%;
+
+    --popover: 20 12% 10%;
+    --popover-foreground: 35 25% 85%;
+
+    /* Torchlight orange */
+    --primary: 25 90% 55%;
+    --primary-foreground: 20 15% 6%;
+
+    /* Stone gray */
+    --secondary: 25 8% 18%;
+    --secondary-foreground: 35 25% 85%;
+
+    /* Cave shadows */
+    --muted: 20 8% 12%;
+    --muted-foreground: 30 15% 55%;
+
+    /* Fire glow */
+    --accent: 15 85% 50%;
+    --accent-foreground: 20 15% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 10% 20%;
+    --input: 25 10% 20%;
+    --ring: 25 90% 55%;
+
+    --radius: 0.5rem;
+
+    /* Custom cave tokens */
+    --cave-deep: 20 15% 4%;
+    --cave-rock: 25 12% 15%;
+    --cave-stone: 30 18% 25%;
+    --torch-glow: 25 100% 50%;
+    --torch-warm: 30 80% 60%;
+    --sandstone: 35 30% 75%;
+    --ember: 10 90% 45%;
+
+    /* Gradients */
+    --gradient-cave-depth: linear-gradient(
+      180deg,
+      hsl(20 15% 8%) 0%,
+      hsl(20 15% 4%) 100%
+    );
+    --gradient-torch: radial-gradient(
+      ellipse at center,
+      hsl(25 100% 50% / 0.3) 0%,
+      transparent 70%
+    );
+    --gradient-rock: linear-gradient(
+      135deg,
+      hsl(25 12% 15%) 0%,
+      hsl(20 15% 8%) 100%
+    );
+
+    /* Shadows */
+    --shadow-torch: 0 0 60px hsl(25 100% 50% / 0.4),
+      0 0 120px hsl(25 100% 50% / 0.2);
+    --shadow-glow: 0 0 30px hsl(25 90% 55% / 0.5);
+    --shadow-carved: inset 2px 2px 4px hsl(20 15% 4% / 0.8),
+      inset -1px -1px 2px hsl(35 25% 85% / 0.1);
+
+    /* Typography */
+    --font-display: "Cinzel", serif;
+    --font-body: "Cormorant Garamond", serif;
+
+    --sidebar-background: 20 15% 8%;
+    --sidebar-foreground: 35 25% 85%;
+    --sidebar-primary: 25 90% 55%;
+    --sidebar-primary-foreground: 20 15% 6%;
+    --sidebar-accent: 25 8% 18%;
+    --sidebar-accent-foreground: 35 25% 85%;
+    --sidebar-border: 25 10% 20%;
+    --sidebar-ring: 25 90% 55%;
+  }
+
+  .dark {
+    --background: 20 15% 6%;
+    --foreground: 35 25% 85%;
+    --card: 20 12% 10%;
+    --card-foreground: 35 25% 85%;
+    --popover: 20 12% 10%;
+    --popover-foreground: 35 25% 85%;
+    --primary: 25 90% 55%;
+    --primary-foreground: 20 15% 6%;
+    --secondary: 25 8% 18%;
+    --secondary-foreground: 35 25% 85%;
+    --muted: 20 8% 12%;
+    --muted-foreground: 30 15% 55%;
+    --accent: 15 85% 50%;
+    --accent-foreground: 20 15% 6%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 25 10% 20%;
+    --input: 25 10% 20%;
+    --ring: 25 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer components {
+  .cave-text {
+    font-family: var(--font-display);
+    text-shadow: 0 0 20px hsl(var(--torch-glow) / 0.5);
+  }
+
+  .carved-text {
+    font-family: var(--font-display);
+    background: linear-gradient(
+      180deg,
+      hsl(var(--sandstone)) 0%,
+      hsl(var(--muted-foreground)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 4px hsl(var(--cave-deep)));
+  }
+
+  .torch-glow {
+    box-shadow: var(--shadow-torch);
+  }
+
+  .stone-surface {
+    background: var(--gradient-rock);
+    box-shadow: var(--shadow-carved);
+  }
+
+  .glyph-hover {
+    @apply transition-all duration-500;
+  }
+
+  .glyph-hover:hover {
+    filter: drop-shadow(0 0 20px hsl(var(--primary)));
+    transform: scale(1.05);
+  }
+}
+
+@layer utilities {
+  .animate-flicker {
+    animation: flicker 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-dust {
+    animation: dust 20s linear infinite;
+  }
+
+  .animate-reveal {
+    animation: reveal 1s ease-out forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes flicker {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.85;
+    }
+    50% {
+      opacity: 0.95;
+    }
+    75% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes dust {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.3;
+    }
+    90% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glowPulse {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 10px hsl(var(--primary) / 0.5));
+    }
+    50% {
+      filter: drop-shadow(0 0 25px hsl(var(--primary) / 0.8));
+    }
+  }
+
+  .parallax-slow {
+    transform: translateZ(-2px) scale(3);
+  }
+
+  .parallax-medium {
+    transform: translateZ(-1px) scale(2);
+  }
+}
