@@ -118,9 +118,6 @@ const ContactChamber = () => {
                   <span className="font-Macedonia Old text-sm text-foreground tracking-wider block group-hover:text-primary transition-colors duration-300">
                     {link.name}
                   </span>
-                  <span className="font-body text-xs text-muted-foreground">
-                    {link.label}
-                  </span>
                 </div>
               </a>
             ))}

@@ -5,10 +5,10 @@
   text-align: center;
 }
 
+html,
 body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden; /* IMPORTANT */
+  -ms-overflow-style: none;
+  overscroll-behavior-y: none;
 }
 
 .logo {

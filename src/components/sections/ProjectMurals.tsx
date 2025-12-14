@@ -12,7 +12,7 @@ const projects = [
     tech: ['React', 'Node.js', 'Express', 'Gemini API', 'MongoDB', 'JWT'],
     impact:
       'Designed and deployed a scalable AI-driven system with secure role-based access and persistent conversational context.',
-    link: 'https://github.com/your-username/ai-agent-desk',
+    link: 'https://github.com/altafbalikai/AI-Agent-Desk',
     live: 'https://ai-agent-desk.vercel.app',
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     ],
     impact:
       'Empowered visually impaired users with hands-free digital communication, significantly improving accessibility and independence.',
-    link: 'https://github.com/your-username/voice-email-system',
+    link: 'https://github.com/altafbalikai/Python-Mayhem',
   },
 ];
 
