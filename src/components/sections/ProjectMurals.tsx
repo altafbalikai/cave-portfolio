@@ -4,36 +4,52 @@ import TorchLight from '../TorchLight';
 
 const projects = [
   {
-    id: 1,
-    title: 'AI Agent Desk',
-    subtitle: 'The Council of Intelligence',
-    description:
-      'A multi-agent AI assistant platform where users interact with specialized agents for technical, medical, and financial guidance, powered by the Gemini API.',
-    tech: ['React', 'Node.js', 'Express', 'Gemini API', 'MongoDB', 'JWT'],
-    impact:
-      'Designed and deployed a scalable AI-driven system with secure role-based access and persistent conversational context.',
-    link: 'https://github.com/altafbalikai/AI-Agent-Desk',
-    live: 'https://ai-agent-desk.vercel.app',
-  },
+  id: 1,
+  title: 'Brayn AI',
+  subtitle: 'A Modern Generative AI Chat Platform',
+  description: [
+  'Built a ChatGPT-inspired Generative AI platform supporting multi-turn conversations and agent-based interactions using OpenRouter-hosted LLM models.',
+  'Implemented a React + Redux Toolkit frontend with responsive layouts, virtualized message lists, and optimized scrolling for desktop and mobile.',
+  'Developed a Node.js + Express backend to manage prompts, conversations, message streaming, and OpenRouter API integration.',
+  'Secured the application with JWT-based authentication and persisted users, conversations, and messages in MongoDB.',
+],
+  tech: [
+    'React',
+    'Redux Toolkit',
+    'Node.js',
+    'Express',
+    'OpenRouter (LLMs)',
+    'MongoDB',
+    'JWT',
+    'Tailwind CSS',
+  ],
+  impact:
+    'Built a scalable, production-ready chat system with secure authentication, persistent conversations, and optimized UX across devices.',
+  link: 'https://github.com/altafbalikai/AI-Agent-Desk',
+  live: 'https://brayn-ai.vercel.app/',
+},
   {
-    id: 2,
-    title: 'Voice-Based Email System',
-    subtitle: 'The Voice of Inclusion',
-    description:
-      'An accessibility-focused email platform enabling visually impaired users to send, receive, and manage emails independently using voice commands.',
-    tech: [
-      'Python',
-      'Django',
-      'JavaScript',
-      'SMTP',
-      'MySQL',
-      'Speech-to-Text',
-      'Text-to-Speech',
-    ],
-    impact:
-      'Empowered visually impaired users with hands-free digital communication, significantly improving accessibility and independence.',
-    link: 'https://github.com/altafbalikai/Python-Mayhem',
-  },
+  id: 2,
+  title: 'Voice-Based Email System',
+  subtitle: 'Voice-Based Email for the Visually Blind',
+  description: [
+    'Developed a voice-based email application using Python and Django, enabling visually impaired users to send, receive, and manage emails independently through voice commands.',
+    'Integrated speech-to-text and text-to-speech modules to allow users to compose, read, and navigate emails entirely hands-free.',
+    'Improved digital accessibility and inclusivity by eliminating the need for external assistance through an intuitive, voice-driven interface.',
+  ],
+  tech: [
+    'Python',
+    'Django',
+    'JavaScript',
+    'SMTP',
+    'MySQL',
+    'Speech-to-Text',
+    'Text-to-Speech',
+  ],
+  impact:
+    'Enabled hands-free digital communication for visually impaired users, significantly enhancing accessibility and independence.',
+  link: 'https://github.com/altafbalikai/Python-Mayhem',
+},
 ];
 
 
@@ -110,9 +126,11 @@ const ProjectMurals = () => {
                       {project.title}
                     </h3>
                     
-                    <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                      {project.description}
-                    </p>
+                    <ul className="font-body text-muted-foreground leading-relaxed mb-6 space-y-2 list-disc list-inside text-left items-start">
+                      {project.description.map((point, index) => (
+                        <li key={index}>{point}</li>
+                      ))}
+                    </ul>
 
                     {/* Tech stack - ancient symbols */}
                     <div className="flex flex-wrap gap-3 mb-6">
