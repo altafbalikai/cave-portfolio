@@ -8,7 +8,7 @@ const skills = [
     description: 'Enterprise backend systems, APIs & Windows applications',
   },
   {
-    name: 'Java & Python',
+    name: 'Python',
     symbol: '◬',
     description: 'Problem solving, automation & backend services',
   },
@@ -20,7 +20,7 @@ const skills = [
   {
     name: 'Frontend Engineering',
     symbol: '☉',
-    description: 'React, Angular, HTML & CSS for modern UI development',
+    description: 'React, Redux, HTML & CSS for modern UI development',
   },
   {
     name: 'Backend Development',
