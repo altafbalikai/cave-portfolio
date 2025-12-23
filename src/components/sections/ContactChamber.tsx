@@ -19,12 +19,6 @@ const contactLinks = [
     href: 'https://www.linkedin.com/in/altafhusen-balikai-b9517a327/',
     label: 'linkedin.com/in/altafhusen-balikai',
   },
-  {
-    name: 'LeetCode',
-    symbol: '∑',
-    href: 'https://leetcode.com/u/user1423yW/',
-    label: 'leetcode.com/u/user1423yW',
-  },
 ];
 
 
