@@ -15,12 +15,12 @@ const FlyingBats = () => {
   useEffect(() => {
     const generateBats = () => {
       const newBats: Bat[] = [];
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 18; i++) {
         newBats.push({
           id: i,
           startX: 20 + Math.random() * 60,
           startY: 10 + Math.random() * 40,
-          delay: Math.random() * 12,
+          delay: Math.random() * 1.2,
           duration: 4 + Math.random() * 3,
           size: 20 + Math.random() * 30,
         });

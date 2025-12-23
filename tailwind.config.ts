@@ -130,7 +130,7 @@ export default {
         shimmer: "shimmer 3s ease-in-out infinite",
         "fade-in-up": "fadeInUp 0.8s ease-out forwards",
         "scale-in": "scaleIn 0.6s ease-out forwards",
-        "bat-fly": "bat-fly 5s ease-in-out infinite",
+        "bat-fly": "bat-fly 5s ease-in-out forwards",
         "wing-flap-left": "wing-flap 0.15s ease-in-out infinite",
         "wing-flap-right": "wing-flap 0.15s ease-in-out infinite reverse",
       },
