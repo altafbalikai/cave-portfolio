@@ -185,7 +185,7 @@ const ProjectMurals = () => {
                     <div
                       className={`overflow-hidden transition-all duration-500 ${
                         activeProject === project.id
-                          ? "max-h-20 opacity-100"
+                          ? "max-h-30 md:max-h-20 opacity-100"
                           : "max-h-0 opacity-0"
                       }`}
                     >
@@ -200,8 +200,8 @@ const ProjectMurals = () => {
                     </div>
 
                     {/* Click indicator */}
-                    <div className="absolute top-4 right-4 text-muted-foreground/50 font-display text-xs tracking-wider">
-                      {activeProject === project.id ? "− CLOSE" : "+ REVEAL"}
+                    <div className="absolute top-4 right-2 text-muted-foreground/50 font-display text-ms tracking-wider">
+                      {activeProject === project.id ? "−" : "+"}
                     </div>
                   </div>
                 </div>
